@@ -1,0 +1,32 @@
+package fr.lthc.game;
+
+import fr.lthc.lthcsmagicworld.audio.SoundClip;
+
+public class Sounds 
+{
+	private boolean isStarted = false;
+	private int background_num = 0;
+	private SoundClip background_1 = new SoundClip("/audio/sound1.wav");
+	private SoundClip background_2 = new SoundClip("/audio/sound2.wav");
+	
+	public void backgroundPlayer()
+	{
+		if(!isStarted)
+		{
+			background_num = 0;
+			isStarted = true;
+		}
+		if(!background_1.isRunning() && !background_2.isRunning())
+		{
+			if(isStarted && background_num == 0)
+			{
+				background_1.play();
+			}
+			if(isStarted && background_num == 1)
+			{
+				background_2.play();
+			}
+		}
+		background_num++;
+	}
+}

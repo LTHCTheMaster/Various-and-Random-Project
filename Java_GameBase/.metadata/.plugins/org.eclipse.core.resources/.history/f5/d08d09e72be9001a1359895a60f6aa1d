@@ -1,0 +1,35 @@
+package fr.lthc.game;
+
+import fr.lthc.lthcsmagicworld.AbstractGame;
+import fr.lthc.lthcsmagicworld.GameContainer;
+import fr.lthc.lthcsmagicworld.Renderer;
+
+public class GameManager extends AbstractGame
+{
+	private Sounds soundPlayer = new Sounds();
+	
+	public GameManager() {
+		
+	}
+	
+	@Override
+	public void update(GameContainer gc, float dt) {
+			soundPlayer.backgroundPlayer();
+	}
+
+	@Override
+	public void render(GameContainer gc, Renderer r) {
+		
+	}
+	
+	public static void main(String args[])
+	{
+		GameContainer gc = new GameContainer(new GameManager());
+		
+		gc.setScale(1.0f);
+		gc.setWidth(1280);
+		gc.setHeight(720);
+		
+		gc.start();
+	}
+}

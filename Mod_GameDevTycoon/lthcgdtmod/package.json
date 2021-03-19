@@ -1,0 +1,12 @@
+{
+	"id": "lthc",
+	"name": "LTHC Mod",
+	"version": "1.0.0",
+	"author": "LTHC",
+	"description" : "LTHC Mod",
+	"main": "./main.js",
+	"dependencies": {
+		"gdt-modAPI": "0.1.x",
+			"UltimateLib":"1.x.x"
+	}
+}
